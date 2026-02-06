@@ -3,6 +3,7 @@ import { Settings, Keyboard, Mic, Cpu, Shield, Info, Power, Zap, Languages, File
 import { invoke } from '@tauri-apps/api/core';
 import { listen } from '@tauri-apps/api/event';
 import { check } from '@tauri-apps/plugin-updater';
+import { FlowGradientCursor } from './ui/flow-gradient-cursor';
 import '../styles.css';
 
 interface AppConfig {
@@ -183,7 +184,8 @@ export const SettingsWindow: React.FC = () => {
     ];
 
     return (
-        <div className="dashboard-container">
+        <FlowGradientCursor>
+            <div className="dashboard-container">
             {/* Sidebar Navigation */}
             <div className="dashboard-sidebar">
                 <div className="dashboard-logo">
@@ -619,6 +621,7 @@ export const SettingsWindow: React.FC = () => {
                     )}
                 </div>
             </div>
-        </div>
+            </div>
+        </FlowGradientCursor>
     );
 };

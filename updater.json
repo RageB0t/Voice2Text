@@ -1,10 +1,10 @@
 {
   "version": "0.2.0",
-  "notes": "Bug fixes: Improved transcription reliability with audio warmup and WAV format fixes",
+  "notes": "Bug fixes: Improved transcription reliability with audio warmup and WAV format fixes. Added premium custom cursor to settings window.",
   "pub_date": "2024-02-05T14:00:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUXp3SjQ1cVNOQUlaa0NWOEFuMXYwa3kzVVVwTkt6ZkhpcXZMT3YxV3BhaDFSZ1FGMmU3Y2VpcWxoU1Irc2NxUTRzM1JUSkJtRzMrQkJHcm5admk1U1lRRnBCemRxRXdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzcwMzQwNDkwCWZpbGU6VmFudGEgRGljdGF0ZV8wLjIuMF94NjQtc2V0dXAuZXhlClA5ajVjMmM4RGFKS2F3RXQ5YlRBVzJuRDQzWEovNzVDdDZldjIzRm81V1NwM3B0UXNHbHB0MzZHVmdnVkgxVVdIRjlLcmF0d2hOZk1qdFB3aEVPZkN3PT0K",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUXp3SjQ1cVNOQUhvaDM2OXp1VS9HTGlMYStkdU84em5EWUV1N2E2dHByRlUvMDJzR29nMmUrMEtHMVhNdjQrY2hxRE4vWUcxQm9SQ1hSektDeGIwZU5BUTI0enZTM3drPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzcwMzQ1NDM1CWZpbGU6VmFudGEgRGljdGF0ZV8wLjIuMF94NjQtc2V0dXAuZXhlCmJ0Q0s3dHhndnZTbVdaWWFDWWRjZDd6UzRYM2p3NXplN2VnWmVOalJMM2hzWkZMRTlUaFJBcVByZndRMzI2ZGVQa21yT2MybmZFditGYXZremxzYkRnPT0K",
       "url": "https://github.com/RageB0t/Voice2Text/releases/download/v0.2.0/Vanta.Dictate_0.2.0_x64-setup.exe"
     }
   }
