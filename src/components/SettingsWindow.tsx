@@ -184,7 +184,7 @@ export const SettingsWindow: React.FC = () => {
     ];
 
     return (
-        <FlowGradientCursor>
+        <FlowGradientCursor hideNativeCursor={true}>
             <div className="dashboard-container">
             {/* Sidebar Navigation */}
             <div className="dashboard-sidebar">
