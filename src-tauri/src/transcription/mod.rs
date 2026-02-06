@@ -91,26 +91,30 @@ impl WhisperProvider {
             .map(|&s| (s.clamp(-1.0, 1.0) * 32767.0) as i16)
             .collect();
         
+        let num_channels: u16 = 1; // Mono
+        let bits_per_sample: u16 = 16;
         let num_samples = samples_i16.len() as u32;
-        let byte_rate = sample_rate * 2; // 16-bit mono
-        let data_size = num_samples * 2;
+        let byte_rate = sample_rate * num_channels as u32 * (bits_per_sample / 8) as u32;
+        let block_align = num_channels * (bits_per_sample / 8);
+        let data_size = num_samples * (bits_per_sample / 8) as u32;
+        let file_size = 36 + data_size;
         
         let mut file = std::fs::File::create(path)?;
         
-        // WAV header
+        // RIFF header
         file.write_all(b"RIFF")?;
-        file.write_all(&(36 + data_size).to_le_bytes())?;
+        file.write_all(&file_size.to_le_bytes())?;
         file.write_all(b"WAVE")?;
         
         // fmt chunk
         file.write_all(b"fmt ")?;
-        file.write_all(&16u32.to_le_bytes())?; // chunk size
-        file.write_all(&1u16.to_le_bytes())?; // audio format (PCM)
-        file.write_all(&1u16.to_le_bytes())?; // num channels (mono)
-        file.write_all(&sample_rate.to_le_bytes())?;
-        file.write_all(&byte_rate.to_le_bytes())?;
-        file.write_all(&2u16.to_le_bytes())?; // block align
-        file.write_all(&16u16.to_le_bytes())?; // bits per sample
+        file.write_all(&16u32.to_le_bytes())?; // Subchunk1Size (16 for PCM)
+        file.write_all(&1u16.to_le_bytes())?; // AudioFormat (1 = PCM)
+        file.write_all(&num_channels.to_le_bytes())?; // NumChannels
+        file.write_all(&sample_rate.to_le_bytes())?; // SampleRate
+        file.write_all(&byte_rate.to_le_bytes())?; // ByteRate
+        file.write_all(&block_align.to_le_bytes())?; // BlockAlign
+        file.write_all(&bits_per_sample.to_le_bytes())?; // BitsPerSample
         
         // data chunk
         file.write_all(b"data")?;
@@ -120,6 +124,8 @@ impl WhisperProvider {
         for sample in samples_i16 {
             file.write_all(&sample.to_le_bytes())?;
         }
+        
+        file.flush()?;
         
         Ok(())
     }
@@ -177,9 +183,6 @@ impl TranscriptionProvider for WhisperProvider {
                     .arg("-f").arg(audio_file_clone.to_str().unwrap())
                     .arg("-l").arg("en")
                     .arg("-nt") // --no-timestamps
-                    .arg("--suppress-blank") // Suppress blank outputs
-                    .arg("--suppress-non-speech-tokens") // Suppress music notes and non-speech
-                    .arg("-pp") // Enable prompt processing for better accuracy
                     .creation_flags(CREATE_NO_WINDOW)
                     .output()
             };
@@ -190,9 +193,6 @@ impl TranscriptionProvider for WhisperProvider {
                 .arg("-f").arg(audio_file_clone.to_str().unwrap())
                 .arg("-l").arg("en")
                 .arg("-nt") // --no-timestamps
-                .arg("--suppress-blank") // Suppress blank outputs
-                .arg("--suppress-non-speech-tokens") // Suppress music notes and non-speech
-                .arg("-pp") // Enable prompt processing for better accuracy
                 .output();
             
             match output {

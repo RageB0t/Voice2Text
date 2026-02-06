@@ -305,6 +305,25 @@ pub fn run() {
                 }
                 log::info!("AudioRecorder initialized and opened on logic thread");
                 
+                // Warmup: Wait for audio callbacks to start flowing
+                log::info!("Warming up audio device...");
+                std::thread::sleep(std::time::Duration::from_millis(500));
+                
+                // Do a test recording to ensure audio is flowing
+                if let Err(e) = audio_recorder.start_recording() {
+                    log::warn!("Warmup recording start failed: {}", e);
+                } else {
+                    std::thread::sleep(std::time::Duration::from_millis(100));
+                    let warmup_audio = audio_recorder.stop_recording();
+                    if warmup_audio.is_empty() {
+                        log::warn!("Warmup captured 0 samples - audio may take longer to initialize");
+                    } else {
+                        log::info!("Warmup successful - captured {} samples", warmup_audio.len());
+                    }
+                }
+                
+                log::info!("Audio device ready for recording");
+                
                 while let Ok(event) = hotkey_rx.recv() {
                     match event {
                         HotkeyEvent::Pressed => {

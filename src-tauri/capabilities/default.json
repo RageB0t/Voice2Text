@@ -12,6 +12,8 @@
     "autostart:allow-enable",
     "autostart:allow-disable",
     "autostart:allow-is-enabled",
-    "positioner:default"
+    "positioner:default",
+    "updater:default",
+    "updater:allow-check"
   ]
 }
