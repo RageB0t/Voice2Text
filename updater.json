@@ -4,8 +4,8 @@
   "pub_date": "2024-02-05T14:00:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUXp3SjQ1cVNOQU5KcUpneW5naUlmNU1lQmcrZ08zaVhGOHU3d1hIL3VkYjVOWUVMbUl2a3pZYmlsRXZ3a212c1JlUGU3RjlsREhxK05BL21qSUlnY1kyWmRQNnlYN3dBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzcwMzQzNTkxCWZpbGU6VmFudGEuRGljdGF0ZV8wLjIuMF94NjQtc2V0dXAubnNpcy56aXAKTmFEUS85c0JBR2RUcUErSURnRFEvRS9WT2R1ZkxvRitwbXdIWC8zeVczV2JHWHlhdDdHbVJWa3lGRXMrQmR5b2RRYnpIeVVaQU8xa3hiWkZQa3JQQlE9PQo=",
-      "url": "https://github.com/RageB0t/Voice2Text/releases/download/v0.2.0/Vanta.Dictate_0.2.0_x64-setup.nsis.zip"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUXp3SjQ1cVNOQUlaa0NWOEFuMXYwa3kzVVVwTkt6ZkhpcXZMT3YxV3BhaDFSZ1FGMmU3Y2VpcWxoU1Irc2NxUTRzM1JUSkJtRzMrQkJHcm5admk1U1lRRnBCemRxRXdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzcwMzQwNDkwCWZpbGU6VmFudGEgRGljdGF0ZV8wLjIuMF94NjQtc2V0dXAuZXhlClA5ajVjMmM4RGFKS2F3RXQ5YlRBVzJuRDQzWEovNzVDdDZldjIzRm81V1NwM3B0UXNHbHB0MzZHVmdnVkgxVVdIRjlLcmF0d2hOZk1qdFB3aEVPZkN3PT0K",
+      "url": "https://github.com/RageB0t/Voice2Text/releases/download/v0.2.0/Vanta.Dictate_0.2.0_x64-setup.exe"
     }
   }
 }
