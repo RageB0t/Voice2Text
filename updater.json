@@ -1,11 +1,11 @@
 {
-  "version": "0.1.0",
-  "notes": "Initial release with Whisper transcription and auto-update support",
-  "pub_date": "2024-02-05T12:00:00Z",
+  "version": "0.2.0",
+  "notes": "Bug fixes: Improved transcription reliability with audio warmup and WAV format fixes",
+  "pub_date": "2024-02-05T14:00:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUXp3SjQ1cVNOQU91bnRlMUwvbXhDeWJQWFg3WjR6UkR6UndtWlZsVWNNUkJEclpRVU1oUDlJckVLOEcvcVFnMnVIZWVObFNSTTdNRitLSUJZcE50YmtQbU9paE5jN0E4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzcwMzM4ODE0CWZpbGU6VmFudGEgRGljdGF0ZV8wLjEuMF94NjQtc2V0dXAuZXhlCkJjU2Vqb0RvaTMxTFJVbHlUTnpabzBNRTYxZXpzY0x6NHU2WUVZb1NDM0pUVVJoRWRPUGdOMUNtUUNkZVAzaEtRZ1FkVFZMUDNuQjNsWHhhUTFHQUNnPT0K",
-      "url": "https://github.com/RageB0t/Voice2Text/releases/download/v0.1.0/Vanta.Dictate_0.1.0_x64-setup.nsis.zip"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTUXp3SjQ1cVNOQUlaa0NWOEFuMXYwa3kzVVVwTkt6ZkhpcXZMT3YxV3BhaDFSZ1FGMmU3Y2VpcWxoU1Irc2NxUTRzM1JUSkJtRzMrQkJHcm5admk1U1lRRnBCemRxRXdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzcwMzQwNDkwCWZpbGU6VmFudGEgRGljdGF0ZV8wLjIuMF94NjQtc2V0dXAuZXhlClA5ajVjMmM4RGFKS2F3RXQ5YlRBVzJuRDQzWEovNzVDdDZldjIzRm81V1NwM3B0UXNHbHB0MzZHVmdnVkgxVVdIRjlLcmF0d2hOZk1qdFB3aEVPZkN3PT0K",
+      "url": "https://github.com/RageB0t/Voice2Text/releases/download/v0.2.0/Vanta.Dictate_0.2.0_x64-setup.nsis.zip"
     }
   }
 }
