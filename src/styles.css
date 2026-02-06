@@ -64,6 +64,17 @@ body {
     background: var(--bg);
 }
 
+/* Force custom cursor only - hide all native cursors */
+.dashboard-container,
+.dashboard-container *,
+.dashboard-container button,
+.dashboard-container select,
+.dashboard-container input,
+.dashboard-container a,
+.dashboard-container [role="button"] {
+    cursor: none !important;
+}
+
 /* Sidebar */
 .dashboard-sidebar {
     width: 220px;
