@@ -1,0 +1,71 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Vanta Dictate",
+  "version": "0.1.0",
+  "identifier": "com.ragebot.vanta-dictate",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Vanta Dictate Settings",
+        "width": 800,
+        "height": 600,
+        "visible": false,
+        "decorations": true,
+        "transparent": false,
+        "alwaysOnTop": false,
+        "skipTaskbar": false,
+        "resizable": true
+      },
+      {
+        "label": "hud",
+        "title": "Vanta Overlay",
+        "width": 300,
+        "height": 100,
+        "x": 0,
+        "y": 0,
+        "visible": false,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "resizable": false,
+        "focusable": false,
+        "url": "/hud"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "resources": [
+      "resources/*"
+    ]
+  },
+  "plugins": {
+    "updater": {
+      "active": true,
+      "endpoints": [
+        "https://raw.githubusercontent.com/RageB0t/Voice2Text/main/updater.json"
+      ],
+      "dialog": false,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDAwOERBNEU2NzgwMkNGOTAKUldTUXp3SjQ1cVNOQU4zYkhQaFZ6MEJnNDlTbkNpbWlVRVdKVkEwOStBMWY3V1A3bUJGSWJ5ZmIK"
+    }
+  }
+}
